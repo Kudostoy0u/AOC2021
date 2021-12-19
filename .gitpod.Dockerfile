@@ -1,10 +1,4 @@
-FROM gitpod/workspace-full:latest
-USER gitpod
-RUN brew install haskell-stack
-RUN stack install brittany hlint
-RUN git clone https://github.com/haskell/haskell-ide-engine --recurse-submodules \
-    && cd haskell-ide-engine  \
-    && stack install haskell-ide-engine \
-    && cd .. \
-    && rm -rf haskell-ide-engine
-ENV PATH=/home/gitpod/.local/bin:$PATH
+FROM gitpod/workspace-base
+
+RUN sudo apt-get update && sudo apt-get install -y haskell-platform
+RUN sudo curl -sSL https://get.haskellstack.org/ | sh
