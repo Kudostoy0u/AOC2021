@@ -1,0 +1,1 @@
+main = readFile "input/Day3.txt" >>=
