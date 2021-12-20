@@ -1,7 +1,6 @@
 --module Main where
 -- uncomment line above if is specified to run on AOC2021.cabal
 p2 = True -- toggle whether part 1 or part 2
-day2 :: Int -> Int -> Int -> Int -> [[String]] -> Int
 day2 idx x y aim list
     | cmd == "forward" = day2 (idx+1) (x+cord) (if p2 then y + aim*cord else y) aim list
     | cmd == "down" = day2 (idx+1) x (if p2 then y else y+cord) (if p2 then aim+cord else aim) list
