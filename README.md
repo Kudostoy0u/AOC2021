@@ -6,4 +6,4 @@ Change puzzle input from `./input` accordingly
 
 All Haskell code answers are located in `./src`
 
-Change Haskell file to be run from `AOC2021.cabal` `main-is` (e.g. to `src/Day2.hs`), and in that respective file uncomment `module Main where`
+Change Haskell file to be run from `AOC2021.cabal` `main-is` (e.g. to `Day2.hs`), and in that respective file uncomment `module Main where`
