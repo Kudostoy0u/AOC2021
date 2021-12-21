@@ -17,7 +17,7 @@ cabal-version:       >=1.10
 
 executable AOC2021
   main-is:             Day4.hs
-  -- other-modules:
+  other-modules:       Helpers
   -- other-extensions:
   build-depends:       base >=4.12, split
   hs-source-dirs:      src
