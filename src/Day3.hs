@@ -1,8 +1,8 @@
-module Main where
+--module Main where
+-- uncomment line above if is specified to run on AOC2021.cabal
 import Data.List.Split (splitOn)
 import Data.List (transpose, group)
 import Data.Char (digitToInt)
-main :: IO ()
 p2 = True -- toggle whether part 1 or part 2
 count x = length . filter (x==)
 mostCommon oxy x = let ones = count 1 x; zeros = count 0 x; one = if oxy then 1 else 0; zero = if oxy then 0 else 1 in if ones > zeros || ones == zeros then one else zero
