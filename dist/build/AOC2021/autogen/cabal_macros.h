@@ -22,6 +22,17 @@
   (major1) == 4 && (major2) == 12 && (minor) <= 0)
 #endif /* MIN_VERSION_base */
 
+/* package matrix-0.3.6.1 */
+#ifndef VERSION_matrix
+#define VERSION_matrix "0.3.6.1"
+#endif /* VERSION_matrix */
+#ifndef MIN_VERSION_matrix
+#define MIN_VERSION_matrix(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  3 || \
+  (major1) == 0 && (major2) == 3 && (minor) <= 6)
+#endif /* MIN_VERSION_matrix */
+
 /* package split-0.2.3.3 */
 #ifndef VERSION_split
 #define VERSION_split "0.2.3.3"

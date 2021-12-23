@@ -3,9 +3,7 @@ image:
 tasks:
   - init: |
       cabal update
-      stack build
-    command: |
-      stack test
+      cabal install matrix
 vscode:
   extensions:
     - haskell.haskell
