@@ -5,7 +5,7 @@ import Data.Matrix
 import Data.List.Split (splitOn, chunksOf)
 import Helpers ( strToInt )
 --Significantly more organized code because it's more complex lol
-getNewCheckBoard instruction bingoBoard checkBoard = mapPos (\(r,c) a->if (bingoBoard!(r,c))==instruction then 1 else 0) checkBoard
+--getNewCheckBoard instruction bingoBoard checkBoard = mapPos (\(r,c) a->if (bingoBoard!(r,c))==instruction then 1 else 0) checkBoard
 part1 checkBoard bingoBoard (instruction:rest) = getNewCheckBoard instruction bingoBoard checkBoard
 main = do
     input <- readFile "input/Day4.txt"
