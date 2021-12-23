@@ -3,9 +3,6 @@ image:
 tasks:
   - init: |
       cabal update
-      cabal install matrix
 vscode:
   extensions:
     - haskell.haskell
-    - justusadam.language-haskell
-    - hoovercj.haskell-linter
