@@ -1,5 +1,5 @@
 --module Main where
--- uncomment line above if is specified to run on AOC2021.cabal
+-- uncomment above if is specified to run on AOC2021.cabal
 import Data.List.Split (splitOn)
 import Data.List (transpose, group)
 import Data.Char (digitToInt)

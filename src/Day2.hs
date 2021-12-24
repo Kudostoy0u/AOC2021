@@ -1,5 +1,5 @@
 --module Main where
--- uncomment line above if is specified to run on AOC2021.cabal
+-- uncomment above if is specified to run on AOC2021.cabal
 import Helpers (strToInt)
 p2 = True -- toggle whether part 1 or part 2
 day2 idx x y aim list

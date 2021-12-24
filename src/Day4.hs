@@ -1,6 +1,6 @@
-{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+--{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 --module Main where
--- uncomment line above if is specified to run on AOC2021.cabal
+-- uncomment above if is specified to run on AOC2021.cabal
 import Data.Matrix((!), fromLists, getCol, getRow, mapPos, toList)
 import Data.List.Split (splitOn, chunksOf)
 import Data.List (elemIndex)
