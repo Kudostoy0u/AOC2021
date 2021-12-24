@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 module Main where
-import Data.Matrix((!), fromLists, getCol, getRow, mapPos, toList, Matrix,zero)
+import Data.Matrix((!), fromLists, getCol, getRow, mapPos, toList)
 import Data.List.Split (splitOn, chunksOf)
 import Data.List (elemIndex)
 import Helpers (strToInt)
