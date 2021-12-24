@@ -1,13 +1,16 @@
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 module Main where
---import Debug.Trace (traceShow)
-import Data.Matrix 
+import Debug.Trace (traceShow)
+import Data.Matrix
 import Data.List.Split (splitOn, chunksOf)
 import Helpers ( strToInt )
 --Significantly more organized code because it's more complex lol
-getNewCheckBoard instruction bingoBoards checkBoards board = let bingoBoard = bingoBoards!!board in mapPos (\(row, column) a -> if bingoBoard!row!column==instruction then 1 else ) (checkBoards!!board)
-part1 :: [(Int,Matrix Int)] -> [(Int,Matrix Int)] -> [Int] -> [(Int,Matrix Int)]
-part1 checkBoard bingoBoard (instruction:rest) = getNewCheckBoard instruction bingoBoard checkBoard 0
+getNewCheckBoard :: Int -> [(Int,Matrix Int)] -> [(Int,Matrix Int)] -> Int -> Matrix Int
+getNewCheckBoard instruction bingoBoards checkBoards board = let bingoBoard = (bingoBoards!!board);checkBoard = checkBoards!!board in mapPos (\(row, column) a -> if (snd bingoBoard!(row,column))==instruction then 1 else snd checkBoard!(row,column)) (snd checkBoard)
+getIfSolved :: [(Int,Matrix Int)] -> Int
+getIfSolved x = map (\x -> ) x
+part1 :: [(Int,Matrix Int)] -> [(Int,Matrix Int)] -> [Int] -> Int
+part1 checkBoard bingoBoard (instruction:rest) = let newChecker = [getNewCheckBoard instruction bingoBoard checkBoard i | i <- [0..length bingoBoard-1]]; isSolved = getIfSolved newChecker in if isSolved > -1 then {-placeholder for solution function-}1 else 1
 main = do
     input <- readFile "input/Day4.txt"
     let allInput = filter (/= "") $ lines input
