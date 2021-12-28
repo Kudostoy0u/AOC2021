@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 module Day4 (day4) where
 -- uncomment above if is specified to run on AOC2021.cabal
 import Data.Matrix((!), fromLists, getCol, getRow, mapPos, toList)
