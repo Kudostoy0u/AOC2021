@@ -1,5 +1,4 @@
 module Day5 (day5) where
--- uncomment above if is specified to run on AOC2021.cabal
 import Data.List.Split (splitOn)
 import qualified Data.Map as Map
 import Helpers (strToInt)
