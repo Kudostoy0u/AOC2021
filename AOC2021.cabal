@@ -16,7 +16,7 @@ extra-source-files:  CHANGELOG.md
 cabal-version:       >=1.10
 
 executable AOC2021
-  main-is:             Day5.hs
+  main-is:             Day6.hs
   other-modules:       Helpers
   -- other-extensions:
   build-depends:       base >=4.12, split,matrix>=0.3.6.1,containers>=0.4

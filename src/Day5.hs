@@ -1,8 +1,9 @@
-module Main where
+--module Main where
+-- uncomment above if is specified to run on AOC2021.cabal
 import Data.List.Split (splitOn)
 import qualified Data.Map as Map
 import Helpers (strToInt)
-p2 = True
+p2 = True -- Toggle whether part 1 or 2
 allPoints x
   | x1 == x2 = {-vertical-} zip (repeat x1) ylist
   | y1 == y2 = {-horizontal-} zip xlist (repeat y1)
