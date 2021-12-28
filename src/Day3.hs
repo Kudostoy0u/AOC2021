@@ -1,8 +1,5 @@
 module Day3 (day3) where
-import Data.List.Split (splitOn)
-import Data.List (transpose, group)
-import Data.Char (digitToInt)
-import Helpers (count)
+import Helpers (count,splitOn,group,transpose,digitToInt)
 mostCommon oxy x = let ones = count x 1; zeros = count x 0; one = if oxy then 1 else 0; zero = if oxy then 0 else 1 in if ones > zeros || ones == zeros then one else zero
 convert [] = 0
 convert (x : xs) = x + 2 * convert xs

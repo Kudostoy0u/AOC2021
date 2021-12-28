@@ -1,7 +1,6 @@
 module Day5 (day5) where
-import Data.List.Split (splitOn)
 import qualified Data.Map as Map
-import Helpers (strToInt)
+import Helpers (strToInt,splitOn)
 allPoints p2 x
   | x1 == x2 = {-vertical-} zip (repeat x1) ylist
   | y1 == y2 = {-horizontal-} zip xlist (repeat y1)
