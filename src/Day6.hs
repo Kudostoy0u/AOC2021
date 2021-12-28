@@ -1,8 +1,7 @@
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 module Main where
 import Data.List.Split (splitOn)
-import Helpers (strToInt)
-solveDay6 :: Int -> Int -> [Int] -> Int
-solveDay6 idx max fishes = if idx > max  then length fishes else solveDay6 (idx+1) max $ concatMap (\x->if x > 0 then [x-1] else [6,8]) fishes
-
--- Subtract 1 from the day
-main = readFile "input/Day6.txt" >>= \x -> print $ solveDay6 0 255 (map strToInt $ splitOn "," x)
+import Helpers (strToInt,count)
+update [a,b,c,d,e,f,g,h,i] = [b,c,d,e,f,g,h+a,i,a]
+solveDay6 day x = sum $ iterate update x !! day
+main = readFile "input/Day6.txt" >>= \x -> print $ let fishes = (map strToInt $ splitOn "," x) in solveDay6 256 $ map (count fishes) $ take 9 [0,1..]
